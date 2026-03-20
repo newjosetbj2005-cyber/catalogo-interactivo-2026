@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Catálogo de Electrodomésticos - 2026</title>
+    <link rel="shortcut icon" href="https://images.emojiterra.com/twitter/v14.0/512px/1f534.png" type="image/x-icon">
+    
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet"/>
+
+    <!-- Metaetiquetas de Open Graph -->
+    <meta property="og:title" content="Catálogo de Electrodomésticos - 2026">
+    <meta property="og:description" content="Descubre nuestra amplia gama de televisores, aires acondicionados, refrigeradores, cocinas, lavadoras y más. Marcas reconocidas con garantía incluida.">
+    <meta property="og:image" content="https://unsplash.com/es/fotos/un-televisor-de-pantalla-plana-sentado-encima-de-un-gabinete-blanco-Sd87V72cJEU">
+    <meta property="og:url" content="https://verdant-kataifi-682dd3.netlify.app/contacto.html">
+    <meta property="og:type" content="website">
+
+    <!-- Metaetiquetas de Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catálogo de Electrodomésticos - 2026">
+    <meta name="twitter:description" content="Descubre nuestra amplia gama de televisores, aires acondicionados, refrigeradores, cocinas, lavadoras y más. Marcas reconocidas con garantía incluida.">
+    <meta name="twitter:image" content="https://unsplash.com/es/fotos/un-televisor-de-pantalla-plana-sentado-encima-de-un-gabinete-blanco-Sd87V72cJEU">
+    <meta name="twitter:url" content="https://verdant-kataifi-682dd3.netlify.app/contacto.html">
+    
+    <style>
+        :root {
+            --bg: #f8f7f5;
+            --bg2: #efe8e3;
+            --bg3: #e5dcd4;
+            --primary: #d4c5bc;
+            --primary-light: #e8ddf7;
+            --secondary: #8b2e3b;
+            --secondary-dark: #6b1f2d;
+            --secondary-light: #a84a5d;
+            --text: #2b2b2b;
+            --text-light: #5a5a5a;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --shadow: 0 8px 40px rgba(0,0,0,0.08);
+            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page {
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.45s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            pointer-events: all;
+            position: relative;
+            height: auto;
+            overflow: visible;
+        }
+
+        #landing {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: var(--bg);
+        }
+
+        .hero-carousel {
+            width: 100%;
+            height: 55vw;
+            max-height: 440px;
+            min-height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            animation: scroll-carousel 40s linear infinite;
+            will-change: transform;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: calc(55vw);
+            max-width: 380px;
+            min-width: 180px;
+            height: 100%;
+            padding: 0 6px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            display: block;
+        }
+
+        @keyframes scroll-carousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .hero-content {
+            padding: 32px 24px 16px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hero-brand {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-family: 'Lora', serif;
+            font-size: clamp(28px, 7vw, 52px);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text);
+        }
+
+        .hero-title span {
+            color: var(--secondary);
+        }
+
+        .hero-desc {
+            font-size: clamp(14px, 3.5vw, 17px);
+            color: var(--text-light);
+            max-width: 480px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            background: var(--secondary);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            box-shadow: 0 4px 24px rgba(139,46,59,0.25);
+        }
+
+        .hero-cta:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(139,46,59,0.4);
+        }
+
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 12px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            color: var(--secondary-dark);
+        }
+
+        #catalog {
+            padding-top: 0;
+        }
+
+        .catalog-header {
+            position: sticky;
+            top: 0;
+            background: var(--bg2);
+            border-bottom: 1px solid var(--primary);
+            padding: 20px;
+            z-index: 100;
+        }
+
+        .catalog-top {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--text);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .catalog-title-block {
+            flex: 1;
+        }
+
+        .catalog-title {
+            font-family: 'Lora', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .catalog-subtitle {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* ── Filter wrapper con botones de scroll (solo PC) ── */
+        .filter-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-scroll-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--primary);
+            background: var(--bg2);
+            color: var(--text);
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            z-index: 5;
+        }
+
+        .filter-scroll-btn:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .filter-scroll-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Estado oculto: invisible pero mantiene su espacio para no saltar el layout */
+        .filter-scroll-btn.hidden-btn {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.7);
+        }
+
+        /* En móviles los botones no existen */
+        @media (max-width: 768px) {
+            .filter-scroll-btn {
+                display: none;
+            }
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 8px 6px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            flex: 1;
+        }
+
+        .filter-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-btn {
+            white-space: nowrap;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .filter-btn.active {
+            background: var(--secondary);
+            color: #ffffff;
+            border-color: var(--secondary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 18px;
+            padding: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 14px;
+                padding: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 24px;
+                padding: 32px;
+            }
+        }
+
+        .product-card {
+            background: var(--bg2);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(139,46,59,0.15);
+        }
+
+        .product-card.hidden {
+            display: none;
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: var(--bg3);
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .card-img img {
+            transform: scale(1.07);
+        }
+
+        .card-body {
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card-cat {
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .card-name {
+            font-family: 'Lora', serif;
+            font-size: clamp(13px, 2.5vw, 15px);
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.2;
+        }
+
+        .card-desc {
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-btn {
+            margin-top: auto;
+            padding: 8px 12px;
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--secondary);
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .card-btn:hover {
+            background: var(--secondary);
+            color: #ffffff;
+            border-color: var(--secondary);
+        }
+
+        #detail {
+            padding-top: 0;
+            position: relative;
+        }
+
+        .detail-image-col {
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        @media (max-width: 768px) {
+            .detail-image-col {
+                position: relative;
+                height: auto;
+            }
+        }
+
+        #detail .back-btn {
+            position: fixed;
+            top: 24px;
+            left: 24px;
+            z-index: 1000;
+            background: var(--secondary);
+            color: #ffffff;
+            border: none;
+        }
+
+        #detail .back-btn:hover {
+            background: var(--secondary-dark);
+            border-color: transparent;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            #detail .back-btn {
+                top: 16px;
+                left: 16px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+
+        .detail-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            padding: 0;
+            width: 100%;
+            min-height: calc(100vh - 80px);
+        }
+
+        @media (max-width: 768px) {
+            .detail-wrap {
+                grid-template-columns: 1fr;
+                gap: 0;
+                padding: 0;
+            }
+        }
+
+        .detail-carousel {
+            position: relative;
+            background: var(--bg3);
+            border-radius: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            animation: slideIn 0.6s ease;
+        }
+
+        @media (max-width: 768px) {
+            .detail-carousel {
+                min-height: 60vw;
+                border-radius: 0;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .detail-carousel-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .detail-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg3);
+        }
+
+        .detail-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.6);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot.active {
+            width: 24px;
+            border-radius: 4px;
+            background: #ffffff;
+        }
+
+        /* ── Swipe hint ── */
+        .swipe-hint {
+            position: absolute;
+            bottom: 56px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            pointer-events: none;
+            animation: hintAnim 3s ease forwards;
+            z-index: 20;
+        }
+
+        .swipe-hint-hand {
+            font-size: 32px;
+            animation: handSwipe 1s ease-in-out 0.4s 2 alternate;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+        }
+
+        .swipe-hint-label {
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        @keyframes handSwipe {
+            from { transform: translateX(0px); }
+            to   { transform: translateX(-22px); }
+        }
+
+        @keyframes hintAnim {
+            0%   { opacity: 0; }
+            15%  { opacity: 1; }
+            80%  { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* ── Arrow navigation: hidden, navigation via swipe/thumbnails only ── */
+        .carousel-arrow { display: none !important; }
+
+        /* ── Thumbnail strip ── */
+        .detail-thumbs {
+            display: flex;
+            gap: 8px;
+            padding: 10px 12px 18px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            background: var(--bg3);
+            margin-bottom: 0;
+        }
+        .detail-thumbs::-webkit-scrollbar { display: none; }
+        .detail-thumb {
+            flex: 0 0 58px;
+            height: 58px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            background: var(--bg3);
+        }
+        .detail-thumb img {
+            width: 100%; height: 100%; object-fit: contain;
+        }
+        .detail-thumb.active {
+            border-color: var(--secondary);
+        }
+
+        .detail-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 32px 28px 32px;
+            background: var(--bg2);
+            border-radius: 0;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .detail-info {
+                padding: 20px 16px 32px;
+                height: auto;
+            }
+        }
+
+        .detail-cat {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .detail-name {
+            font-family: 'Lora', serif;
+            font-size: clamp(20px, 5.5vw, 30px);
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .detail-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .specs-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 8px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            border: 1px solid var(--primary);
+        }
+
+        .specs-table th {
+            background: var(--primary);
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .specs-table td {
+            padding: 10px;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .specs-table tr:hover {
+            background: #efe8e3;
+        }
+
+        .wa-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--secondary);
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            margin-top: 8px;
+        }
+
+        .wa-btn:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139,46,59,0.3);
+        }
+
+        .wa-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .placeholder-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
+            color: var(--text-light);
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="landing" class="page active">
+        <div class="hero-carousel">
+            <div class="carousel-track" id="carouselTrack">
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <span class="hero-brand">Electrodomésticos Premium</span>
+            <h1 class="hero-title">Electrodomésticos de <span>Calidad</span></h1>
+            <p class="hero-desc">Descubre nuestra amplia gama de televisores, aires acondicionados, refrigeradores, cocinas, lavadoras y más. Marcas reconocidas con garantía incluida.</p>
+            <button class="hero-cta" id="cta-button">Explorar Catálogo</button>
+        </div>
+
+        <div class="social-bar">
+            <a href="https://wa.me/16185569175" target="_blank" class="social-link" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div id="catalog" class="page">
+        <div class="catalog-header">
+            <div class="catalog-top">
+                <button class="back-btn" id="back-catalog-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;">
+                        <path d="M19 11H7.83l5.59-5.59L12 3l-9 9 9 9 1.41-1.41L7.83 13H19v-2z"/>
+                    </svg>
+                    Atrás
+                </button>
+                <div class="catalog-title-block">
+                    <h2 class="catalog-title">Catálogo de Productos</h2>
+                    <p class="catalog-subtitle">Selecciona una categoría para filtrar</p>
+                </div>
+            </div>
+
+            <div class="filter-wrapper">
+                <button class="filter-scroll-btn hidden-btn" id="filterBtnLeft" onclick="scrollFilter(-1)" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="filter-bar" id="filterBar">
+                    <button class="filter-btn active" onclick="filterCat('all', this)">Todos</button>
+                </div>
+                <button class="filter-scroll-btn" id="filterBtnRight" onclick="scrollFilter(1)" aria-label="Siguiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+        </div>
+    </div>
+
+    <div id="detail" class="page">
+        <div id="detailContent">
+        </div>
+    </div>
+
+    <script>
+        const PRODUCTS = [];
+        const WA_NUMBER = "16185569175";
+        let currentPage = "landing";
+        let isTransitioning = false;
+
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        function initializeApp() {
+            loadProducts();
+            setupEventListeners();
+            renderCarousel();
+            renderProducts();
+            renderFilters();
+            initFilterScroll();
+        }
+
+        function loadProducts() {
+            PRODUCTS.length = 0;
+            PRODUCTS.push(
+
+            
+                // ── TELEVISORES ──
+                {id: "tv_43_daewoo", name: "Televisor Daewoo 43\" QLED Series – 43DA25QL", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/Hp2JRrT8/Televisor-Daewoo-43in-QLED-43-DA25-QL.jpg","https://i.ibb.co/8DrkP7x3/Televisor-Daewoo-43in-QLED-43-DA25-QL-VAR-2.jpg","https://i.ibb.co/B2dRL57w/Televisor-Daewoo-43in-QLED-43-DA25-QL-VAR-3.jpg"],
+                    img: "https://i.ibb.co/Hp2JRrT8/Televisor-Daewoo-43in-QLED-43-DA25-QL.jpg",
+                    desc: "Smart TV QLED de 43 pulgadas con Google TV integrado. Tecnología de pantalla cuántica que ofrece colores vibrantes y un contraste excepcional. Ideal para cine en casa y gaming.",
+                    specs: [["Modelo", "43DA25QL"], ["Pantalla", "43\" QLED"], ["Resolución", "4K Ultra HD (3840×2160)"], ["Sistema", "Google TV"], ["Audio", "Dolby Audio"], ["Conectividad", "Wi-Fi, Google Cast, HDMI, USB"], ["Apps", "Netflix, YouTube, Prime Video, Google Play"], ["Garantía", "1 año"]]},
+
+                {id: "tv_50_daewoo", name: "Televisor Daewoo 50\" QLED Series – 50DA25QL", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/k2m0W8Bg/Televisor-Daewoo-50in-QLED-50-DA25-QL.png","https://i.ibb.co/JwDnnYfb/Televisor-Daewoo-50in-QLED-50-DA25-QL-VAR-2.jpg","https://i.ibb.co/BVYxyTqQ/Televisor-Daewoo-50in-QLED-50-DA25-QL-VAR-3.jpg"],
+                    img: "https://i.ibb.co/k2m0W8Bg/Televisor-Daewoo-50in-QLED-50-DA25-QL.png",
+                    desc: "Pantalla QLED de 50 pulgadas con resolución 4K y sonido Dolby Atmos. Compatible con Google TV para acceso a cientos de aplicaciones de streaming.",
+                    specs: [["Modelo", "50DA25QL"], ["Pantalla", "50\" QLED"], ["Resolución", "4K Ultra HD"], ["Sistema", "Google TV"], ["Audio", "Dolby Atmos + Dolby Vision"], ["Conectividad", "Wi-Fi, HDMI, USB, Bluetooth"], ["Apps", "Netflix, YouTube, Prime Video, Apple TV"], ["Garantía", "1 año"]]},
+
+                {id: "tv_60_daewoo", name: "Televisor Daewoo 60\" QLED Series – 60DA25QL", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/Qvnm71vQ/Televisor-Daewoo-60in-QLED-60-DA25-QL.jpg","https://i.ibb.co/nqhv0MD9/Televisor-Daewoo-60in-QLED-60-DA25-QL-VAR-2.jpg","https://i.ibb.co/gLR8zR7R/Televisor-Daewoo-60in-QLED-60-DA25-QL-VAR-3.jpg"],
+                    img: "https://i.ibb.co/Qvnm71vQ/Televisor-Daewoo-60in-QLED-60-DA25-QL.jpg",
+                    desc: "Gigantesca pantalla QLED de 60 pulgadas con tecnología 4K QLED+ y Eye Care. Perfecta para salas amplias y experiencias cinematográficas inmersivas.",
+                    specs: [["Modelo", "60DA25QL"], ["Pantalla", "60\" QLED+"], ["Resolución", "4K Ultra HD"], ["Tecnología", "Eye Care / QLED+"], ["Audio", "Dolby Atmos + Dolby Vision"], ["Conectividad", "Wi-Fi, HDMI x3, USB x2, Bluetooth"], ["Sistema", "Google TV"], ["Garantía", "1 año"]]},
+
+                {id: "tv_65_daewoo", name: "Televisor Daewoo 65\" QLED Series – 65DA25QL", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/Tq0jx8ZB/Televisor-Daewoo-65in-QLED-65-DA25-QL.jpg","https://i.ibb.co/jPZ1B2kk/Televisor-Daewoo-65in-QLED-65-DA25-QL-VAR-2.jpg","https://i.ibb.co/2Yy7vWWJ/Televisor-Daewoo-65in-QLED-65-DA25-QL-VAR-3.jpg"],
+                    img: "https://i.ibb.co/Tq0jx8ZB/Televisor-Daewoo-65in-QLED-65-DA25-QL.jpg",
+                    desc: "La experiencia de cine definitiva con pantalla QLED de 65 pulgadas, 4K nativo y Google TV. Disfruta de una imagen de máxima claridad con sonido envolvente Dolby.",
+                    specs: [["Modelo", "65DA25QL"], ["Pantalla", "65\" QLED"], ["Resolución", "4K Ultra HD"], ["Sistema", "Google TV"], ["Audio", "Dolby Atmos + Dolby Vision"], ["Conectividad", "Wi-Fi, HDMI, USB, Google Cast"], ["Apps", "Netflix, YouTube, Prime Video, Spotify"], ["Garantía", "1 año"]]},
+
+                {id: "tv_40_daewoo", name: "Televisor Daewoo 40\" Google TV – 40DA500ZS", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/YFxCjp4C/Televisor-Daewoo-40in-Google-TV-40-DA500-ZS.png","https://i.ibb.co/WvxFY4vm/Televisor-Daewoo-40in-Google-TV-40-DA500-ZS-VAR-2.jpg","https://i.ibb.co/jcgnQvj/Televisor-Daewoo-40in-Google-TV-40-DA500-ZS-VAR-3.png"],
+
+                    img: "https://i.ibb.co/YFxCjp4C/Televisor-Daewoo-40in-Google-TV-40-DA500-ZS.png",
+
+                    desc: "Smart TV compacto de 40 pulgadas con Google TV y sonido Dolby Audio. Perfecto para habitaciones o espacios medianos. Incluye Google Cast para espejear tu celular.",
+                    specs: [["Modelo", "40DA500ZS"], ["Pantalla", "40\" LED"], ["Resolución", "Full HD (1920×1080)"], ["Sistema", "Google TV"], ["Audio", "Dolby Audio"], ["Conectividad", "Wi-Fi, HDMI, USB, Google Cast"], ["Apps", "Netflix, YouTube, Prime Video"], ["Garantía", "1 año"]]},
+
+                {id: "tv_40_hyundai", name: "Televisor Hyundai 40\" FHD Google TV – HY40GT2S", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/HDcJh1rC/Televisor-Hyundai-40in-FHD-Google-TV-HY40-GT2-S.jpg","https://i.ibb.co/0RFvqtjk/Televisor-Hyundai-40in-FHD-Google-TV-HY40-GT2-S-VAR-2.png","https://i.ibb.co/pC8pxVc/Televisor-Hyundai-40in-FHD-Google-TV-HY40-GT2-S-VAR-3.jpg"],
+                    img: "https://i.ibb.co/HDcJh1rC/Televisor-Hyundai-40in-FHD-Google-TV-HY40-GT2-S.jpg",
+                    desc: "Smart TV Full HD de 40 pulgadas con Google TV y Google Cast. Diseño elegante con marco delgado, ideal para hogar u oficina. Compatible con Dolby Audio para un sonido nítido.",
+                    specs: [["Modelo", "HY40GT2S"], ["Pantalla", "40\" LED FHD"], ["Resolución", "Full HD (1920×1080)"], ["Sistema", "Google TV"], ["Audio", "Dolby Audio"], ["Conectividad", "Wi-Fi, HDMI, USB, Google Cast"], ["Apps", "Netflix, YouTube, Prime Video, Google Play"], ["Garantía", "1 año"]]},
+
+                {id: "tv_50_hyundai", name: "Televisor Hyundai 50\" FHD Google TV", category: "televisores", cat_label: "TELEVISORES",
+                    imgs: ["https://i.ibb.co/mCR3MDhj/Televisor-Hyundai-50in-FHD-Google-TV.jpg","https://i.ibb.co/jZPPnLxw/Televisor-Hyundai-50in-FHD-Google-TV-VAR-2.jpg","https://i.ibb.co/Mkn27HHm/Televisor-Hyundai-50in-FHD-Google-TV-VAR-3.jpg"],
+                    img: "https://i.ibb.co/mCR3MDhj/Televisor-Hyundai-50in-FHD-Google-TV.jpg",
+                    desc: "Smart TV Full HD de 50 pulgadas con Google TV integrado. Compatible con Google Cast, Dolby Audio y principales apps de streaming como Netflix, YouTube y Prime Video.",
+                    specs: [["Pantalla", "50\" FHD (1920×1080)"], ["Sistema", "Google TV"], ["Audio", "Dolby Audio"], ["Streaming", "Netflix, YouTube, Prime Video, Google Play"], ["Conectividad", "WiFi, HDMI, Google Cast"], ["Marca", "Hyundai"], ["Voltaje", "110V / 60Hz"], ["Garantía", "1 año"]]},
+
+
+
+
+                // ── SONIDO Y ESTÉREO ──
+                {id: "sound_lg_s60tr", name: "LG Soundbar S60TR - Home Theater Soundbar de 5.1 canales", category: "sonido", cat_label: "SONIDO Y ESTÉREO",
+                    imgs: ["https://i.ibb.co/9ms23G94/LG-Soundbar-S60-TR-5-1-Canales.jpg"],
+                    img: "https://i.ibb.co/9ms23G94/LG-Soundbar-S60-TR-5-1-Canales.jpg",
+                    desc: "Sistema de audio de 5.1 canales con 440W, subwoofer inalámbrico y altavoces traseros para sonido envolvente real. Tecnología AI Sound Pro para ajuste automático según el contenido.",
+                    specs: [["Potencia", "440W"], ["Canales", "5.1 (Barra + Subwoofer + 2 traseros)"], ["Bluetooth", "5.3"], ["Puertos", "HDMI eARC/ARC, Óptica, USB"], ["Formatos", "Dolby Digital, DTS, LPCM, AAC"], ["Dim. Barra", "850 x 63 x 87 mm"], ["Dim. Sub.", "200 x 377 x 285 mm"], ["Funciones", "WOW Interface, WOW Orchestra, AI Sound Pro"], ["Garantía", "1 año"]]},
+                {id: "sound_samsung_s60b", name: "Samsung HW-S60B (Serie S) - Barra de sonido Todo-en-uno", category: "sonido", cat_label: "SONIDO Y ESTÉREO",
+                    imgs: ["https://i.ibb.co/LdYWV7h1/Samsung-Soundbar-HW-S60-B-5-0-Canales.png"],
+                    img: "https://i.ibb.co/LdYWV7h1/Samsung-Soundbar-HW-S60-B-5-0-Canales.png",
+                    desc: "Barra de sonido premium de 5.0 canales con 7 altavoces internos incluyendo laterales y central dedicado. Acabado en tela, ideal para espacios modernos. Compatible con Alexa y Google Assistant.",
+                    specs: [["Canales", "5.0 (7 altavoces internos)"], ["Potencia", "200W"], ["Audio", "Dolby Atmos inalámbrico, DTS Virtual:X"], ["Conectividad", "Wi-Fi, Bluetooth, Apple AirPlay 2, Spotify Connect"], ["Puertos", "HDMI eARC/ARC, Óptica"], ["Dimensiones", "670 x 62 x 105 mm"], ["Peso", "2.7 kg"], ["Inteligente", "Alexa y Google Assistant"], ["Garantía", "1 año"]]},
+                {id: "sound_samsung_b650f", name: "Samsung B-Series Soundbar HW-B650F – 3.1 canales", category: "sonido", cat_label: "SONIDO Y ESTÉREO",
+                    imgs: ["https://i.ibb.co/9mKtbQ1w/Samsung-Soundbar-HW-B650-F-3-1-Canales.jpg"],
+                    img: "https://i.ibb.co/9mKtbQ1w/Samsung-Soundbar-HW-B650-F-3-1-Canales.jpg",
+                    desc: "Sistema de audio de 3.1 canales con canal central dedicado a voces claras. Subwoofer inalámbrico con Bass Boost. Ideal para salas donde se consumen muchas películas y series.",
+                    specs: [["Canales", "3.1 (Barra 3 canales + Subwoofer)"], ["Potencia", "430W"], ["Audio", "Dolby Audio, DTS Virtual:X"], ["Bluetooth", "Multi-Connection (2 dispositivos)"], ["Puertos", "HDMI ARC, Óptica, USB"], ["Dimensiones", "1030 x 59.4 x 105 mm"], ["Garantía", "1 año"]]},
+                {id: "sound_lg_s60tr_2", name: "LG Soundbar S60TR - Sistema de cine en casa de 5.1 canales", category: "sonido", cat_label: "SONIDO Y ESTÉREO",
+                    imgs: ["https://i.ibb.co/YzW381R/LG-Soundbar-S60-TR-Sistema-Cine-5-1.png"],
+                    img: "https://i.ibb.co/YzW381R/LG-Soundbar-S60-TR-Sistema-Cine-5-1.png",
+                    desc: "Sistema de audio de alto rendimiento de 440W que combina barra principal, subwoofer inalámbrico y altavoces traseros para una experiencia cinematográfica total.",
+                    specs: [["Canales", "5.1"], ["Potencia", "440W"], ["Audio", "Dolby Digital, DTS, AI Sound Pro"], ["Subwoofer", "Inalámbrico (Activo)"], ["Puertos", "HDMI ARC, Óptica, USB"], ["Dimensiones", "850 x 63 x 87 mm"], ["Compatibilidad", "WOW Orchestra + WOW Interface (TVs LG)"], ["Garantía", "1 año"]]},
+
+
+
+
+                // ── AIRES ACONDICIONADOS ──
+                {id: "aire_daewoo_vent", name: "Aire Acondicionado de Ventana Daewoo", category: "aires", cat_label: "AIRES ACONDICIONADOS",
+                    imgs: ["https://i.ibb.co/7NS3f6sB/Aire-Acondicionado-Ventana-Daewoo.png"],
+                    img: "https://i.ibb.co/7NS3f6sB/Aire-Acondicionado-Ventana-Daewoo.png",
+                    desc: "Unidad de aire acondicionado de ventana marca Daewoo. Control mecánico intuitivo, fácil instalación y operación. Ideal para habitaciones y espacios pequeños.",
+                    specs: [["Marca", "Daewoo"], ["Tipo", "Aire de ventana"], ["Control", "Mecánico (perillas)"], ["Voltaje", "110V / 60Hz"], ["Refrigerante", "R-410a (ecológico)"], ["Instalación", "Ventana corrediza estándar"], ["Modos", "Enfriamiento / Ventilador"], ["Garantía", "1 año"]]},
+                {id: "aire_hyundai_5000", name: "Aire Acondicionado de Ventana Hyundai 5,000 BTU – HYNAV5000P20", category: "aires", cat_label: "AIRES ACONDICIONADOS",
+                    imgs: ["https://i.ibb.co/WvG6B2SJ/Aire-Acondicionado-Ventana-Hyundai-5000-BTU-HYNAV5000-P20.jpg"],
+                    img: "https://i.ibb.co/WvG6B2SJ/Aire-Acondicionado-Ventana-Hyundai-5000-BTU-HYNAV5000-P20.jpg",
+                    desc: "Aire acondicionado de ventana de 5,000 BTU ideal para espacios de hasta 15 m². Corriente 110V, sin necesidad de instalación especial.",
+                    specs: [["Modelo", "HYNAV5000P20"], ["Capacidad", "5,000 BTU/h"], ["Voltaje", "110V / 60Hz"], ["Corriente", "5.6 A"], ["Potencia", "600 W"], ["Refrigerante", "R-410a"], ["Cobertura", "Hasta 15 m²"], ["Garantía", "1 año"]]},
+                {id: "aire_hyundai_split", name: "Aire Acondicionado Split Hyundai 24,000 BTU – Inverter", category: "aires", cat_label: "AIRES ACONDICIONADOS",
+                    imgs: ["https://i.ibb.co/Cp7vftPp/Aire-Acondicionado-Split-Hyundai-24000-BTU-Inverter.jpg"],
+                    img: "https://i.ibb.co/Cp7vftPp/Aire-Acondicionado-Split-Hyundai-24000-BTU-Inverter.jpg",
+                    desc: "Sistema split de alta eficiencia con tecnología Inverter para mayor ahorro energético. Unidad interior mural + unidad exterior compacta. Ideal para salas y ambientes amplios.",
+                    specs: [["Marca", "Hyundai"], ["Tipo", "Split mural inverter"], ["Capacidad", "24,000 BTU/h"], ["Voltaje", "220V / 60Hz"], ["Eficiencia", "Clase B (Inverter)"], ["Refrigerante", "R-410a"], ["Modos", "Frío / Calor / Auto / Ventilador / Deshumidificador"], ["Garantía", "1 año"]]},
+
+
+
+
+                // ── NEVERAS Y REFRIGERADORES ──
+                {id: "refri_daewoo_2p_9", name: "Refrigerador Daewoo 2 Puertas – 9 pies³", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/jktDwsn6/Refrigerador-Daewoo-2-Puertas-DFT211-MS-8-pies.png","https://i.ibb.co/7xMMyStJ/Refrigerador-Daewoo-2-Puertas-DFT211-MS-8-pies-VAR-2.png","https://i.ibb.co/SwZv4FcD/Refrigerador-Daewoo-2-Puertas-DFT211-MS-8-pies-VAR-3.png"],
+                    img: "https://i.ibb.co/jktDwsn6/Refrigerador-Daewoo-2-Puertas-DFT211-MS-8-pies.png",
+                    desc: "Refrigerador de 2 puertas con congelador superior, acabado en acero inoxidable. Diseño moderno y eficiente, ideal para familias pequeñas y medianas.",
+                    specs: [["Marca", "Daewoo"], ["Tipo", "2 puertas / congelador superior"], ["Capacidad", "9 pies³ (~255 litros)"], ["Acabado", "Acero inoxidable (plata)"], ["Descongelación", "Manual (cong.) / Auto (refrig.)"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "refri_daewoo_1p_6", name: "Refrigerador Daewoo 1 Puerta con Dispensador – DFT115DS (6 pies³)", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/DgDkpHQ2/Refrigerador-Daewoo-1-Puerta-con-Dispensador-DFT115-DS-6-pies.jpg","https://i.ibb.co/BDw3ynC/Refrigerador-Daewoo-1-Puerta-con-Dispensador-DFT115-DS-6-pies-VAR-2.png","https://i.ibb.co/SD87fJ8J/Refrigerador-Daewoo-1-Puerta-con-Dispensador-DFT115-DS-6-pies-VAR-3.png"],
+                    img: "https://i.ibb.co/DgDkpHQ2/Refrigerador-Daewoo-1-Puerta-con-Dispensador-DFT115-DS-6-pies.jpg",
+                    desc: "Refrigerador de una sola puerta con dispensador de agua externo integrado. Acabado en acero inoxidable (Inox), congelador superior interno y clasificación energética A.",
+                    specs: [["Modelo", "DFT115DS"], ["Capacidad", "6 pies³ (170 L)"], ["Puertas", "1 Puerta"], ["Dispensador", "Water Dispenser externo"], ["Acabado", "Acero Inoxidable (Inox)"], ["Eficiencia", "Clase A"], ["Voltaje", "110V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "refri_hisense_2p", name: "Refrigerador Hisense 2 Puertas Inverter con Dispensador", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/v6Pjm2C3/Refrigerador-Hisense-2-Puertas-Inverter-con-Dispensador.jpg","https://i.ibb.co/cc3Dkq1B/Refrigerador-Hisense-2-Puertas-Inverter-con-Dispensador-VAR-2.png","https://i.ibb.co/pjW7vTG5/Refrigerador-Hisense-2-Puertas-Inverter-con-Dispensador-VAR-3.png"],
+                    img: "https://i.ibb.co/v6Pjm2C3/Refrigerador-Hisense-2-Puertas-Inverter-con-Dispensador.jpg",
+                    desc: "Refrigerador de 2 puertas con tecnología Inverter para mayor eficiencia energética y menor ruido. Incluye dispensador de agua en la puerta. Acabado en negro mate. Sin escarcha.",
+                    specs: [["Tipo", "2 Puertas (Top Freezer)"], ["Tecnología", "Inverter"], ["Dispensador", "Agua externo"], ["No Frost", "Sí (congelador)"], ["Acabado", "Negro Inox"], ["Eficiencia", "Clase A"], ["Voltaje", "110V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "refri_samsung_french", name: "Refrigerador Samsung French Door con Dispensador Easy Access", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/hxpcm5Lh/Refrigerador-Samsung-French-Door-con-Dispensador-Easy-Access.jpg","https://i.ibb.co/9m74gTJg/Refrigerador-Samsung-French-Door-con-Dispensador-Easy-Access-VAR-2.png","https://i.ibb.co/CKjzz71k/Refrigerador-Samsung-French-Door-con-Dispensador-Easy-Access-VAR-3.jpg"],
+                    img: "https://i.ibb.co/hxpcm5Lh/Refrigerador-Samsung-French-Door-con-Dispensador-Easy-Access.jpg",
+                    desc: "Refrigerador French Door con dispensador Easy Access de agua y hielo. Fabricador automático de hielo integrado que produce 11 libras por día. Acabado en acero inoxidable.",
+                    specs: [["Tipo", "French Door (3 puertas)"], ["Dispensador", "Easy Access – agua y hielo"], ["Fabricador hielo", "Automático – 11 lbs/día"], ["Acabado", "Acero Inoxidable"], ["Eficiencia", "Ahorro certificado"], ["Marca", "Samsung"], ["Voltaje", "110V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "nevera_frigilux_4p", name: "Nevera Frigilux 4 Puertas 493L Inverter – MPN-493DC", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/8DQsPFL1/Nevera-Frigilux-4-Puertas-493-L-Inverter-MPN-493-DC.jpg","https://i.ibb.co/CKVdg8gG/Nevera-Frigilux-4-Puertas-493-L-Inverter-MPN-493-DC-VAR-2.jpg","https://i.ibb.co/F4XZxb0N/Nevera-Frigilux-4-Puertas-493-L-Inverter-MPN-493-DC-VAR3.png"],
+                    img: "https://i.ibb.co/8DQsPFL1/Nevera-Frigilux-4-Puertas-493-L-Inverter-MPN-493-DC.jpg",
+                    desc: "Nevera Multi-Door de 4 puertas con tecnología Inverter, panel de control digital en puerta y 493 litros de capacidad. Distribución interior con cajones y estantes ajustables.",
+                    specs: [["Modelo", "MPN-493DC"], ["Capacidad", "493 Litros"], ["Tipo", "4 Puertas (Multi-Door)"], ["Tecnología", "Inverter"], ["Control", "Panel digital en puerta"], ["Acabado", "Acero Inoxidable"], ["Eficiencia", "Clase A"], ["Garantía", "1 año"]]},
+                {id: "refri_sankey_2p", name: "Refrigerador Sankey 2 Puertas – Negro", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/7xGQWqGZ/Refrigerador-Sankey-2-Puertas-Negro.jpg","https://i.ibb.co/2fZ7s0Y/Refrigerador-Sankey-2-Puertas-Negro-VAR-2.png","https://i.ibb.co/cXVqS2vH/Refrigerador-Sankey-2-Puertas-Negro-VAR-3.png"],
+                    img: "https://i.ibb.co/7xGQWqGZ/Refrigerador-Sankey-2-Puertas-Negro.jpg",
+                    desc: "Refrigerador de 2 puertas con congelador superior en acabado negro mate. Diseño compacto y elegante. Tecnología Eco Frost. Eficiente consumo eléctrico.",
+                    specs: [["Tipo", "2 Puertas (congelador superior)"], ["Acabado", "Negro Mate"], ["Tecnología", "Eco Frost"], ["Marca", "Sankey"], ["Eficiencia", "Clase A"], ["Voltaje", "110V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "refri_hyundai_2p_8", name: "Refrigerador Hyundai 2 Puertas – 8 pies³ Acero Inoxidable", category: "neveras", cat_label: "NEVERAS Y REFRIGERADORES",
+                    imgs: ["https://i.ibb.co/Fc3hTdW/Refrigerador-Hyundai-2-Puertas-8-pies-Acero-Inoxidable.jpg","https://i.ibb.co/7Jhf7Mqt/Refrigerador-Hyundai-2-Puertas-8-pies-Acero-Inoxidable-VAR-2.png","https://i.ibb.co/GQ9t6bRX/Refrigerador-Hyundai-2-Puertas-8-pies-Acero-Inoxidable-VAR-3.png"],
+                    img: "https://i.ibb.co/Fc3hTdW/Refrigerador-Hyundai-2-Puertas-8-pies-Acero-Inoxidable.jpg",
+                    desc: "Refrigerador de 2 puertas con congelador superior en acero inoxidable. Sistema Defrost manual en congelador. Diseño elegante y robusto. Clasificación energética A.",
+                    specs: [["Capacidad", "8 pies³"], ["Tipo", "2 Puertas (congelador superior)"], ["Sistema", "Defrost manual"], ["Acabado", "Stainless Steel"], ["Eficiencia", "Clase A"], ["Marca", "Hyundai"], ["Voltaje", "110V / 60Hz"], ["Garantía", "1 año"]]},
+
+
+
+
+                // ── COCINAS ──
+                {id: "cocina_hyundai_4h_24", name: "Cocina a Gas Hyundai 4 Hornillas – 24\" Acero Inoxidable", category: "cocinas", cat_label: "COCINAS",
+                    imgs: ["https://i.ibb.co/cK7C8TG0/Cocina-a-Gas-Hyundai-4-Hornillas-24-Acero-Inoxidable.png"],
+                    img: "https://i.ibb.co/cK7C8TG0/Cocina-a-Gas-Hyundai-4-Hornillas-24-Acero-Inoxidable.png",
+                    desc: "Cocina a gas de 4 hornillas con horno integrado, tapa de vidrio templado y acabado en acero inoxidable. Encendido eléctrico automático en todas las hornillas.",
+                    specs: [["Marca", "Hyundai"], ["Tamaño", "24 pulgadas"], ["Hornillas", "4 quemadores a gas"], ["Horno", "Sí (multifunción)"], ["Tapa", "Vidrio templado"], ["Acabado", "Acero inoxidable"], ["Encendido", "Eléctrico automático"], ["Garantía", "1 año"]]},
+                {id: "cocina_daewoo_4h_20", name: "Cocina a Gas Daewoo 4 Hornillas – 20\" Acero Inoxidable", category: "cocinas", cat_label: "COCINAS",
+                    imgs: ["https://i.ibb.co/YBwvsxJQ/Cocina-a-Gas-Daewoo-4-Hornillas-20-Acero-Inoxidable.png"],
+                    img: "https://i.ibb.co/YBwvsxJQ/Cocina-a-Gas-Daewoo-4-Hornillas-20-Acero-Inoxidable.png",
+                    desc: "Cocina a gas compacta de 4 hornillas con horno y puerta de vidrio templado. Diseño en acero inoxidable resistente al calor y de fácil limpieza. Perfecta para espacios reducidos.",
+                    specs: [["Marca", "Daewoo"], ["Tamaño", "20 pulgadas (compacta)"], ["Hornillas", "4 quemadores a gas"], ["Horno", "Sí, puerta de vidrio templado"], ["Acabado", "Acero inoxidable"], ["Parrillas", "Hierro fundido"], ["Encendido", "Manual o eléctrico"], ["Garantía", "1 año"]]},
+                {id: "cocinas_hyundai_20", name: "Cocinas a Gas Hyundai 20\" – Gris y Acero (4 Hornillas)", category: "cocinas", cat_label: "COCINAS",
+                    imgs: ["https://i.ibb.co/LhqZgzb0/Cocinas-a-Gas-Hyundai-20-Gris-y-Acero-4-Hornillas.png"],
+                    img: "https://i.ibb.co/LhqZgzb0/Cocinas-a-Gas-Hyundai-20-Gris-y-Acero-4-Hornillas.png",
+                    desc: "Dúo de cocinas a gas de 20 pulgadas disponibles en color gris y acero inoxidable. Horno integrado con puerta de vidrio, parrillas de hierro fundido y encendido eléctrico.",
+                    specs: [["Marca", "Hyundai"], ["Tamaño", "20 pulgadas"], ["Colores", "Gris antracita / Acero inox"], ["Hornillas", "4 quemadores a gas"], ["Horno", "Sí (~20 litros)"], ["Parrillas", "Hierro fundido removible"], ["Garantía", "1 año"]]},
+                {id: "daewoo_tope_dual", name: "Daewoo DA76GES - Tope de cocina Dual (Gas + Eléctrico) de 5 hornillas", category: "cocinas", cat_label: "COCINAS",
+                    imgs: ["https://i.ibb.co/chMQkhfk/Daewoo-DA76-GES-Tope-de-cocina-Dual-Gas-El-ctrico-de-5-hornillas.png"],
+                    img: "https://i.ibb.co/chMQkhfk/Daewoo-DA76-GES-Tope-de-cocina-Dual-Gas-El-ctrico-de-5-hornillas.png",
+                    desc: "Placa de cocción híbrida empotrable con 4 hornillas a gas y 1 eléctrica. Superficie de vidrio templado negro. Encendido electrónico integrado. Ideal para hogares que buscan seguridad alternativa.",
+                    specs: [["Tipo montaje", "Empotrable (Built-in)"], ["Dimensiones", "76 cm de ancho"], ["Configuración", "5 hornillas (4 gas + 1 eléctrica)"], ["Superficie", "Vidrio templado alta resistencia"], ["Encendido", "Electrónico integrado"], ["Voltaje", "110-120V / 60Hz"], ["Parrillas", "Hierro fundido (Cast iron)"], ["Garantía", "1 año"]]},
+                {id: "daewoo_30_mirror", name: "Daewoo DGR-30MIR (Serie Inox Mirror) - Cocina a Gas de 30 pulgadas", category: "cocinas", cat_label: "COCINAS",
+                    imgs: ["https://i.ibb.co/Fkky98qp/Daewoo-DGR-30-MIR-Serie-Inox-Mirror-Cocina-a-Gas-de-30-pulgadas-76-cm-con-horno-y-calientaplato.jpg"],
+                    img: "https://i.ibb.co/Fkky98qp/Daewoo-DGR-30-MIR-Serie-Inox-Mirror-Cocina-a-Gas-de-30-pulgadas-76-cm-con-horno-y-calientaplato.jpg",
+                    desc: "Cocina de piso en acero inoxidable con panel frontal tipo espejo. 6 hornillas de distintos tamaños y doble cavidad: horno principal y calientaplatos inferior.",
+                    specs: [["Material", "Acero inoxidable alta durabilidad"], ["Tamaño", "30 pulgadas (76 cm)"], ["Hornillas", "6 quemadores (rápidos y semirápidos)"], ["Encendido", "Electrónico por botón"], ["Puerta horno", "Doble vidrio panorámico"], ["Parrillas", "Hierro fundido (Cast Iron)"], ["Acabado frontal", "Vidrio templado efecto espejo"], ["Garantía", "1 año"]]},
+                {id: "daewoo_30_gas_6h", name: "Cocina Daewoo de 30\" a Gas - 6 Hornillas (Acero Inoxidable)", category: "cocinas", cat_label: "COCINAS",
+                    imgs: ["https://i.ibb.co/xt4hp278/Cocina-Daewoo-de-30-pulgadas-a-Gas-6-Hornillas-Acero-Inoxidable.jpg"],
+                    img: "https://i.ibb.co/xt4hp278/Cocina-Daewoo-de-30-pulgadas-a-Gas-6-Hornillas-Acero-Inoxidable.jpg",
+                    desc: "Cocina de piso para uso doméstico intensivo. Acabado premium en acero inoxidable y tapa de vidrio templado. Horno de gran capacidad con visor panorámico.",
+                    specs: [["Encendido", "Electrónico (perillas integradas)"], ["Dimensiones", "76 cm (ancho) x 90 cm (alto) x 60 cm (fondo)"], ["Material", "Acero inoxidable alta resistencia"], ["Tapa", "Vidrio templado transparente"], ["Hornillas", "6 (rápido, semi-rápido y auxiliar)"], ["Horno", "Gran capacidad, visor panorámico"], ["Extras", "Luz interior, pies ajustables"], ["Garantía", "1 año"]]},
+
+
+
+
+                // ── LAVADORAS Y SECADORAS ──
+                {id: "lavadora_hyundai_semi_11", name: "Lavadora Semiautomática de Doble Tina Hyundai 11 kg", category: "lavadoras", cat_label: "LAVADORAS Y SECADORAS",
+                    imgs: ["https://i.ibb.co/RGj72mRh/Lavadora-Semiautom-tica-de-Doble-Tina-Hyundai-11-kg.png"],
+                    img: "https://i.ibb.co/RGj72mRh/Lavadora-Semiautom-tica-de-Doble-Tina-Hyundai-11-kg.png",
+                    desc: "Lavadora semiautomática de doble tina (twin tub). Compartimento de lavado 11 kg y centrifugado ~6.5 kg. Control manual con 4 perillas para tiempo, selector de lavado, drenaje y centrifugado.",
+                    specs: [["Marca", "Hyundai"], ["Capacidad lavado", "11 kg"], ["Capacidad centrifugado", "~6.5 kg"], ["Programas", "Normal, Fuerte, Delicado"], ["Temporizador lavado", "~15 min"], ["Temporizador centrifugado", "~5 min"], ["Filtro pelusas", "Sí (cartucho interior)"], ["Voltaje", "110-120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "lavadora_daewoo_semi_12", name: "Lavadora Semiautomática de Doble Tina Daewoo 12 kg", category: "lavadoras", cat_label: "LAVADORAS Y SECADORAS",
+                    imgs: ["https://i.ibb.co/ps1jXfG/Lavadora-Semiautom-tica-de-Doble-Tina-Daewoo-12-kg.png"],
+                    img: "https://i.ibb.co/ps1jXfG/Lavadora-Semiautom-tica-de-Doble-Tina-Daewoo-12-kg.png",
+                    desc: "Lavadora semiautomática de doble tina de 12 kg. Tecnología Air Turbo en la tapa del centrifugado para secado más eficiente. 4 perillas de control en panel superior.",
+                    specs: [["Marca", "Daewoo"], ["Tipo", "Semiautomática Doble Tina"], ["Capacidad lavado", "12 kg"], ["Capacidad centrifugado", "~7 kg"], ["Programas", "Normal, Fuerte, Delicado"], ["Temporizador lavado", "~15 min"], ["Temporizador centrifugado", "~5 min"], ["Dimensiones aprox.", "90 cm (A) x 85 cm (An) x 50 cm (P)"], ["Voltaje", "110-120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "lavadora_whirlpool_17", name: "Lavadora de Carga Superior Whirlpool 17 kg con Xpert System", category: "lavadoras", cat_label: "LAVADORAS Y SECADORAS",
+                    imgs: ["https://i.ibb.co/BH4x65Vx/Lavadora-de-Carga-Superior-Whirlpool-17-kg-con-Xpert-System.jpg"],
+                    img: "https://i.ibb.co/BH4x65Vx/Lavadora-de-Carga-Superior-Whirlpool-17-kg-con-Xpert-System.jpg",
+                    desc: "Lavadora de carga superior de 17 kg con tecnología Xpert System para optimizar ciclos. Tina de acero 100% inoxidable. Ahorro de hasta 47,000 litros de agua al año.",
+                    specs: [["Marca", "Whirlpool"], ["Capacidad", "17 kg"], ["Sistema lavado", "Agitador (Xpert System)"], ["Ciclos", "12-13 (Color, Blanca, Delicados, Rápido y más)"], ["Temperatura", "Fría, Semifría, Tibia, Caliente"], ["Tina", "Acero Inoxidable 100%"], ["Dispensadores", "Suavizante y Blanqueador"], ["Dimensiones", "109 x 66 x 66 cm"], ["Voltaje", "110-127V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "lavadora_hyundai_10", name: "Lavadora de Carga Superior Hyundai 10 kg", category: "lavadoras", cat_label: "LAVADORAS Y SECADORAS",
+                    imgs: ["https://i.ibb.co/rRzzxSQP/Lavadora-de-Carga-Superior-Hyundai-10-kg.jpg"],
+                    img: "https://i.ibb.co/rRzzxSQP/Lavadora-de-Carga-Superior-Hyundai-10-kg.jpg",
+                    desc: "Lavadora de carga superior automática de 10 kg con tapa de vidrio templado negro y panel digital. Varios ciclos de lavado y filtro de pelusas incluido.",
+                    specs: [["Marca", "Hyundai"], ["Capacidad", "10 kg"], ["Programas", "Normal, Rápido, Delicado, Pesado, Remojo"], ["Filtro pelusas", "Sí (cartucho o bolsa interior)"], ["Tapa", "Vidrio templado negro"], ["Control", "Panel digital"], ["Voltaje", "110-120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "secadora_whirlpool", name: "Secadora de Carga Frontal Whirlpool", category: "lavadoras", cat_label: "LAVADORAS Y SECADORAS",
+                    imgs: ["https://i.ibb.co/wVj7BjP/Secadora-de-Carga-Frontal-Whirlpool.png"],
+                    img: "https://i.ibb.co/wVj7BjP/Secadora-de-Carga-Frontal-Whirlpool.png",
+                    desc: "Secadora Whirlpool con 3 perillas de control para ciclo, temperatura y nivel de secado. Puerta de carga frontal con tambor de gran capacidad.",
+                    specs: [["Marca", "Whirlpool"], ["Capacidad", "7.0 pies cúbicos"], ["Ciclos", "Normal, Delicado, Pesado, Aire Frío"], ["Temperatura", "Alta, Media, Baja, Aire Frío"], ["Nivel secado", "Ajustable (control de humedad)"], ["Dimensiones aprox.", "27\" (An) x 43\" (A) x 28\" (P)"], ["Garantía", "1 año"]]},
+
+
+
+
+                // ── ELECTRODOMÉSTICOS DE COCINA ──
+                {id: "licuadora_oster_digital", name: "Licuadora Oster All-Metal Drive Digital – BLSTAB-4655", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/Pvx2p5gj/Licuadora-Oster-All-Metal-Drive-Digital-BLSTAB-4655.jpg"],
+                    img: "https://i.ibb.co/Pvx2p5gj/Licuadora-Oster-All-Metal-Drive-Digital-BLSTAB-4655.jpg",
+                    desc: "Licuadora con motor All-Metal Drive y panel de control digital con 4 programas preestablecidos: Sopas, Jugos, Salsas y Pulso. Vaso de vidrio resistente a choques térmicos.",
+                    specs: [["Marca", "Oster"], ["Modelo", "BLSTAB-4655"], ["Motor", "All-Metal Drive"], ["Programas", "Sopas, Jugos, Salsas, Pulso Alto/Bajo"], ["Vaso", "Vidrio resistente a choques térmicos"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "freidora_bremen_35", name: "Freidora de Aire Bremen Digital 3.5L – LH-00002960", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/hF88T6r4/Freidora-de-Aire-Bremen-Digital-3-5-L-LH-00002960.jpg"],
+                    img: "https://i.ibb.co/hF88T6r4/Freidora-de-Aire-Bremen-Digital-3-5-L-LH-00002960.jpg",
+                    desc: "Freidora de aire digital de 3.5 litros con pantalla LED. Cuerpo en color gris oscuro y canasta antiadherente extraíble. Ideal para preparar alimentos con mínimo aceite.",
+                    specs: [["Marca", "Bremen"], ["Modelo", "LH-00002960"], ["Capacidad", "3.5 litros"], ["Control", "Digital con pantalla LED"], ["Color", "Gris oscuro"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "licuadora_oster_2vel", name: "Licuadora Oster All-Metal Drive 2 Velocidades – BLKAGWRD", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/VphkhqY0/Licuadora-Oster-All-Metal-Drive-2-Velocidades-BLKAGWRD.jpg"],
+                    img: "https://i.ibb.co/VphkhqY0/Licuadora-Oster-All-Metal-Drive-2-Velocidades-BLKAGWRD.jpg",
+                    desc: "Licuadora con tecnología All-Metal Drive, acople metálico 10 veces más fuerte. Control de 2 velocidades mediante perilla. Vaso de vidrio de 1.5L resistente a choques térmicos.",
+                    specs: [["Marca", "Oster"], ["Modelo", "BLKAGWRD"], ["Motor", "All-Metal Drive"], ["Velocidades", "2 velocidades + pulso"], ["Vaso", "Vidrio 1.5L resistente a choques"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "olla_bremen_6l", name: "Olla a Presión Eléctrica Bremen Digital – 6L Acero Inoxidable", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/N2ntb1Gp/Olla-a-Presi-n-El-ctrica-Bremen-Digital-6-L-Acero-Inoxidable.jpg"],
+                    img: "https://i.ibb.co/N2ntb1Gp/Olla-a-Presi-n-El-ctrica-Bremen-Digital-6-L-Acero-Inoxidable.jpg",
+                    desc: "Olla a presión eléctrica multifunción de 6 litros en acero inoxidable. Panel digital táctil con 12+ modos. Sistema de seguridad Pro-Lock.",
+                    specs: [["Marca", "Bremen"], ["Capacidad", "6 litros"], ["Material", "Acero inoxidable"], ["Programas", "12+ modos (Sopa, Caldo, Guiso, Granos, Arroz, Vapor, Yogurt y más)"], ["Pantalla", "Digital LCD"], ["Potencia", "1000W"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "freidora_daewoo_3l", name: "Freidora de Aire Daewoo Digital 3L – DA-AF3VR", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/S4WMq553/Freidora-de-Aire-Daewoo-Digital-3-L-DA-AF3-VR.jpg"],
+                    img: "https://i.ibb.co/S4WMq553/Freidora-de-Aire-Daewoo-Digital-3-L-DA-AF3-VR.jpg",
+                    desc: "Freidora de aire digital compacta de 3 litros. Panel táctil con pantalla que muestra temperatura y tiempo. Múltiples iconos de programas. Acabado negro brillante.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA-AF3VR"], ["Capacidad", "3 litros"], ["Control", "Panel táctil digital"], ["Temperatura máx.", "200°C"], ["Color", "Negro"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "freidora_daewoo_4l", name: "Freidora de Aire Daewoo Digital 4L – DA-AF4N00", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/wNwpYz42/Freidora-de-Aire-Daewoo-Digital-4-L-DA-AF4-N00.png"],
+                    img: "https://i.ibb.co/wNwpYz42/Freidora-de-Aire-Daewoo-Digital-4-L-DA-AF4-N00.png",
+                    desc: "Freidora de aire digital de 4 litros con pantalla táctil de alta visibilidad. Temperatura máxima 200°C. Múltiples programas preestablecidos. Acabado negro con detalles plateados.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA-AF4N00"], ["Capacidad", "4 litros"], ["Control", "Digital Touch Screen"], ["Temperatura máx.", "200°C"], ["Color", "Negro / Plateado"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "freidora_daewoo_mecanica", name: "Freidora de Aire Daewoo Mecánica – DA-AF3MEL", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/JwdyMH0G/Freidora-de-Aire-Daewoo-Mec-nica-DA-AF3-MEL.png"],
+                    img: "https://i.ibb.co/JwdyMH0G/Freidora-de-Aire-Daewoo-Mec-nica-DA-AF3-MEL.png",
+                    desc: "Freidora de aire con control mecánico de perillas. Diseño robusto en negro y gris. Capacidad 2.8 litros. Fácil operación sin pantalla digital.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA-AF3MEL"], ["Capacidad", "2.8 litros"], ["Control", "Perillas mecánicas"], ["Temperatura máx.", "200°C"], ["Color", "Negro / Gris"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "licuadora_oster_800w", name: "Licuadora Oster All-Metal Drive 800W – BLSTRAD-880", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/wN1BRNq5/Licuadora-Oster-All-Metal-Drive-800-W-BLSTRAD-880.png"],
+                    img: "https://i.ibb.co/wN1BRNq5/Licuadora-Oster-All-Metal-Drive-800-W-BLSTRAD-880.png",
+                    desc: "Licuadora de alto rendimiento con motor 800W, tecnología All-Metal Drive y acople metálico 10 veces más fuerte. Vaso de vidrio de 1.5L. 2 velocidades y función pulso.",
+                    specs: [["Marca", "Oster"], ["Modelo", "BLSTRAD-880"], ["Potencia", "800W"], ["Motor", "All-Metal Drive"], ["Velocidades", "2 velocidades + pulso"], ["Vaso", "Vidrio 1.5L"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "panquequera_electrica", name: "Máquina para Pancakes / Cupcakes Eléctrica – 7 Moldes", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/fdzc8wKs/M-quina-para-Pancakes-Cupcakes-El-ctrica-7-Moldes.jpg"],
+                    img: "https://i.ibb.co/fdzc8wKs/M-quina-para-Pancakes-Cupcakes-El-ctrica-7-Moldes.jpg",
+                    desc: "Máquina eléctrica antiadherente para preparar mini pancakes, cupcakes o arepas. 7 moldes redondos con cierre de seguridad y mango de plástico resistente al calor.",
+                    specs: [["Capacidad", "7 moldes redondos"], ["Superficie", "Antiadherente"], ["Cierre", "Seguro con manija"], ["Uso", "Pancakes, cupcakes, arepas"], ["Color", "Negro"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "refractarias_vidrio", name: "Juego de Refractarias de Vidrio Cuadradas – 3 Piezas", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/fdHft4sb/Juego-de-Refractarias-de-Vidrio-Cuadradas-3-Piezas.png"],
+                    img: "https://i.ibb.co/fdHft4sb/Juego-de-Refractarias-de-Vidrio-Cuadradas-3-Piezas.png",
+                    desc: "Set de 3 moldes cuadrados de vidrio borosilicato para horneado. Resistentes a altas temperaturas. Aptos para horno, microondas y lavavajillas. Transparentes para visualizar la cocción.",
+                    specs: [["Material", "Vidrio borosilicato"], ["Piezas", "3 moldes cuadrados"], ["Uso", "Horno, microondas, lavavajillas"], ["Resistencia", "Alta temperatura"], ["Forma", "Cuadrada"], ["Garantía", "1 año"]]},
+                {id: "freidora_daewoo_4l_ventana", name: "Freidora de Aire Daewoo Digital 4L con Ventana – DA-AF4NRW", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/zhT8SFwC/Freidora-de-Aire-Daewoo-Digital-4-L-con-Ventana-DA-AF4-NRW.jpg"],
+                    img: "https://i.ibb.co/zhT8SFwC/Freidora-de-Aire-Daewoo-Digital-4-L-con-Ventana-DA-AF4-NRW.jpg",
+                    desc: "Freidora de aire con ventana de visualización en la canasta para monitorear la cocción sin interrumpirla. Panel digital frontal con iconos de alimentos. Temperatura máxima 200°C.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA-AF4NRW"], ["Capacidad", "4 litros"], ["Característica", "Ventana de visualización"], ["Control", "Panel digital"], ["Temperatura máx.", "200°C"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "olla_bremen_6l_negro", name: "Olla a Presión Eléctrica Bremen Digital – 6L Negro", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/tMmdD404/Olla-a-Presi-n-El-ctrica-Bremen-Digital-6-L-Negro.jpg"],
+                    img: "https://i.ibb.co/tMmdD404/Olla-a-Presi-n-El-ctrica-Bremen-Digital-6-L-Negro.jpg",
+                    desc: "Olla a presión eléctrica multifunción de 6 litros con acabado negro lacado. Panel digital táctil con 12+ modos de cocción. Sistema de seguridad Pro-Lock.",
+                    specs: [["Marca", "Bremen"], ["Capacidad", "6 litros"], ["Material", "Exterior negro lacado"], ["Programas", "12+ modos (Sopa, Caldo, Guiso, Granos, Arroz, Vapor, Yogurt y más)"], ["Pantalla", "Digital LCD"], ["Potencia", "1000W"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "juego_ollas_ceramica_7", name: "Juego de Ollas Cerámica Bremen Antiadherente 7 Piezas – LC-0000414", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/G4gsGYxK/Juego-de-Ollas-Cer-mica-Bremen-Antiadherente-7-Piezas-LC-0000414.png"],
+                    img: "https://i.ibb.co/G4gsGYxK/Juego-de-Ollas-Cer-mica-Bremen-Antiadherente-7-Piezas-LC-0000414.png",
+                    desc: "Juego de 7 piezas con recubrimiento cerámico antiadherente en color crema. Incluye sartén, cacerola pequeña, cacerola mediana, olla y tapas. Compatible con gas, eléctrica e inducción.",
+                    specs: [["Marca", "Bremen"], ["Modelo", "LC-0000414"], ["Piezas", "7 piezas"], ["Recubrimiento", "Cerámica antiadherente"], ["Color", "Crema / Marfil"], ["Compatibilidad", "Gas, eléctrica, inducción"], ["Garantía", "1 año"]]},
+                {id: "olla_bremen_4l", name: "Olla a Presión Eléctrica Bremen Compacta – 4L Acero", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/C5Z70YRC/Olla-a-Presi-n-El-ctrica-Bremen-Compacta-4-L-Acero.jpg"],
+                    img: "https://i.ibb.co/C5Z70YRC/Olla-a-Presi-n-El-ctrica-Bremen-Compacta-4-L-Acero.jpg",
+                    desc: "Olla a presión eléctrica compacta de 4 litros en acero inoxidable con botones programables. Funciones para arroz, cereales, sopa, caldo, granola, cocción lenta, aves y pescados.",
+                    specs: [["Marca", "Bremen"], ["Capacidad", "4 litros"], ["Material", "Acero inoxidable"], ["Funciones", "Arroz, Sopa, Yogurt, Aves, Pescado, Cocción lenta"], ["Control", "Botones programables"], ["Potencia", "700W"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "sandwichera_daewoo", name: "Sandwichera Compacta Daewoo 2 Rebanadas – DA09MBL", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/s9rv1RWH/Sandwichera-Compacta-Daewoo-2-Rebanadas-DA09-MBL.jpg"],
+                    img: "https://i.ibb.co/s9rv1RWH/Sandwichera-Compacta-Daewoo-2-Rebanadas-DA09-MBL.jpg",
+                    desc: "Sandwichera eléctrica compacta para 2 rebanadas. Placas antiadherentes triangulares que sellan los bordes. Luz indicadora de calor y seguro de cierre. Diseño ergonómico.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA09MBL"], ["Capacidad", "2 sándwiches"], ["Placas", "Antiadherentes triangulares"], ["Color", "Negro / Plateado"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "freidora_bremen_acero", name: "Freidora de Aire Bremen Digital Acero Inoxidable", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/bjYHmwPk/Freidora-de-Aire-Bremen-Digital-Acero-Inoxidable.jpg"],
+                    img: "https://i.ibb.co/bjYHmwPk/Freidora-de-Aire-Bremen-Digital-Acero-Inoxidable.jpg",
+                    desc: "Freidora de aire con acabado premium en acero inoxidable y panel digital con 12 programas preestablecidos: Steak, Fries, Leg, Wings, Fish, Shrimps, Potato, Cake, Kebab, Egg Tart, Peanut y Biscuits.",
+                    specs: [["Marca", "Bremen"], ["Control", "Panel digital con 12 presets"], ["Programas", "Steak, Fries, Wings, Fish, Cake y más"], ["Material", "Acero inoxidable"], ["Pantalla", "LED digital"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "juego_ollas_ceramica_3", name: "Juego de Ollas Cerámica Bremen Antiadherente 3 Piezas – LC-0000Y251", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/jNf7s8y/Juego-de-Ollas-Cer-mica-Bremen-Antiadherente-3-Piezas-LC-0000-Y251.jpg"],
+                    img: "https://i.ibb.co/jNf7s8y/Juego-de-Ollas-Cer-mica-Bremen-Antiadherente-3-Piezas-LC-0000-Y251.jpg",
+                    desc: "Juego de 3 piezas con recubrimiento cerámico antiadherente color terracota. Incluye olla grande, cacerola mediana y sartén con tapas de vidrio. Mangos de madera.",
+                    specs: [["Marca", "Bremen"], ["Modelo", "LC-0000Y251"], ["Piezas", "3 piezas + tapas"], ["Recubrimiento", "Cerámica antiadherente"], ["Color", "Terracota / Marrón"], ["Mangos", "Madera"], ["Compatibilidad", "Gas, eléctrica"], ["Garantía", "1 año"]]},
+                {id: "licuadora_daewoo_15l", name: "Licuadora Daewoo 1.5L – DA-L2GB", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/ZzkhjDy7/Licuadora-Daewoo-1-5-L-DA-L2-GB.jpg"],
+                    img: "https://i.ibb.co/ZzkhjDy7/Licuadora-Daewoo-1-5-L-DA-L2-GB.jpg",
+                    desc: "Licuadora doméstica con vaso de plástico transparente de 1.5 litros. Control de 2 velocidades y función pulso mediante perilla. Motor silencioso. Diseño minimalista en blanco.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA-L2GB"], ["Capacidad", "1.5 litros"], ["Velocidades", "2 velocidades + pulso"], ["Vaso", "Plástico transparente"], ["Color", "Blanco"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+                {id: "freidora_daewoo_3l_rack", name: "Freidora de Aire Daewoo Digital 3L con Rack – DA-SS6AFB", category: "cocina", cat_label: "ELECTRODOMÉSTICOS DE COCINA",
+                    imgs: ["https://i.ibb.co/d4FnBSck/Freidora-de-Aire-Daewoo-Digital-3-L-con-Rack-DA-SS6-AFB.jpg"],
+                    img: "https://i.ibb.co/d4FnBSck/Freidora-de-Aire-Daewoo-Digital-3-L-con-Rack-DA-SS6-AFB.jpg",
+                    desc: "Freidora de aire digital de 3 litros con rack superior incluido para mayor versatilidad. Panel táctil digital. Temperatura máxima 200°C. Diseño compacto ideal para cocinas pequeñas.",
+                    specs: [["Marca", "Daewoo"], ["Modelo", "DA-SS6AFB"], ["Capacidad", "3 litros"], ["Accesorio", "Rack superior incluido"], ["Control", "Panel táctil digital"], ["Temperatura máx.", "200°C"], ["Voltaje", "120V / 60Hz"], ["Garantía", "1 año"]]},
+
+                // ── BOMBAS, HIDROJETS Y SOPORTES ──
+                {id: "hidrolavadora_hyundai", name: "Hidrojet / Hidrolavadora Profesional Hyundai", category: "bombas", cat_label: "BOMBAS DE AGUA, HIDROJETS Y SOPORTES",
+                    imgs: ["https://i.ibb.co/C3p3CZDJ/Hidrojet-Hidrolavadora-Profesional-Hyundai.png"],
+                    img: "https://i.ibb.co/C3p3CZDJ/Hidrojet-Hidrolavadora-Profesional-Hyundai.png",
+                    desc: "Hidrolavadora eléctrica de alta presión marca Hyundai. Perfecta para limpiar vehículos, fachadas y pisos. Diseño ergonómico con pistola de presión variable incluida.",
+                    specs: [["Marca", "Hyundai"], ["Tipo", "Hidrojet eléctrico"], ["Potencia", "1,800 W"], ["Presión máx.", "135 bar / 1,957 PSI"], ["Caudal", "6.5 L/min"], ["Voltaje", "120V / 60Hz"], ["Peso", "5.7 kg"], ["Garantía", "1 año"]]},
+                {id: "bomba_agua_bm_hp", name: "Bomba de Agua Periférica BM – ½ HP", category: "bombas", cat_label: "BOMBAS DE AGUA, HIDROJETS Y SOPORTES",
+                    imgs: ["https://i.ibb.co/9XBPf58/Bomba-Agua-Periferica-BM-0-5-HP.jpg"],
+                    img: "https://i.ibb.co/9XBPf58/Bomba-Agua-Periferica-BM-0-5-HP.jpg",
+                    desc: "Bomba de agua periférica doméstica ideal para aumentar la presión del agua, riego de jardines y transferencia de agua. Motor de alta velocidad y bajo ruido.",
+                    specs: [["Marca", "BM"], ["Tipo", "Bomba periférica doméstica"], ["Potencia", "½ HP (370 W)"], ["Caudal máx.", "30 L/min"], ["Altura máx.", "30 m"], ["Voltaje", "110-220V / 60Hz"], ["Uso", "Doméstico"], ["Garantía", "1 año"]]},
+                {id: "soporte_tv_boost", name: "Base / Soporte para Televisor Boost – 23\" a 55\" y 23\" a 65\"", category: "bombas", cat_label: "BOMBAS DE AGUA, HIDROJETS Y SOPORTES",
+                    imgs: ["https://i.ibb.co/bjMWC8v7/Soporte-Televisor-Boost-BO2355-M4-BO2355-M24.png"],
+                    img: "https://i.ibb.co/bjMWC8v7/Soporte-Televisor-Boost-BO2355-M4-BO2355-M24.png",
+                    desc: "Soporte de pared articulado para televisores LED/LCD. Permite inclinación y rotación para el ángulo de visión ideal. Disponible en modelo 23\"-55\" (BO2355M4) y 23\"-65\" (BO2355M24).",
+                    specs: [["Marca", "Boost"], ["Modelos", "BO2355M4 (23\"-55\") / BO2355M24 (23\"-65\")"], ["Tipo", "Soporte de pared articulado"], ["Compatibilidad", "LED TV / LCD TV"], ["Norma VESA", "100×100 / 200×200 / 400×200 / 400×400 mm"], ["Peso máx.", "45 kg"], ["Material", "Acero alta resistencia"], ["Garantía", "1 año"]]},
+
+                // ── MÁQUINAS DE AFEITAR ──
+                {id: "kit_cortacabello_wahl", name: "Kit Cortacabello Wahl Deluxe Groom Pro – 21 Piezas", category: "afeitar", cat_label: "MÁQUINAS DE AFEITAR",
+                    imgs: ["https://i.ibb.co/zHTrZV37/Kit-Cortacabello-Wahl-Deluxe-Groom-Pro-21-Piezas.jpg"],
+                    img: "https://i.ibb.co/zHTrZV37/Kit-Cortacabello-Wahl-Deluxe-Groom-Pro-21-Piezas.jpg",
+                    desc: "Kit profesional completo para corte de cabello y arreglo personal. Incluye maquinilla con cuchillas de autoafilado, trimmer compacto para detalles, 10 peines guía y estuche blando.",
+                    specs: [["Marca", "Wahl"], ["Modelo", "Deluxe Groom Pro"], ["Piezas", "21 piezas"], ["Cuchillas", "Autoafilado (precisión duradera)"], ["Peines guía", "10 tamaños individuales"], ["Trimmer", "Compacto para detalles y retoques"], ["Garantía", "1 año"]]},
+                {id: "kit_cortacabello_wahl_basic", name: "Wahl HomeCut™ Basic - Kit para Cortar el Cabello (14 piezas)", category: "afeitar", cat_label: "MÁQUINAS DE AFEITAR",
+                    imgs: ["https://i.ibb.co/CKLgDTTx/Wahl-Home-Cut-Basic-Kit-14-Piezas.jpg"],
+                    img: "https://i.ibb.co/CKLgDTTx/Wahl-Home-Cut-Basic-Kit-14-Piezas.jpg",
+                    desc: "Kit de corte de pelo doméstico con cable para potencia constante. Palanca de ajuste de altura para diferentes largos. Motor electromagnético vibratorio de larga duración.",
+                    specs: [["Marca", "Wahl"], ["Motor", "Electromagnético vibratorio de larga duración"], ["Alimentación", "Con cable (sin necesidad de carga)"], ["Cuchillas", "Acero al carbono, autoafilables"], ["Piezas", "14 piezas (máquina + accesorios)"], ["Ajuste altura", "Palanca Taper Lever para degradados"], ["Rango corte", "3 mm a 25 mm"], ["Voltaje", "110-120V"], ["Garantía", "1 año"]]}
+            );
+        }
+
+        function setupEventListeners() {
+            document.getElementById('cta-button').addEventListener('click', showCatalog);
+            document.getElementById('back-catalog-btn').addEventListener('click', handleBack);
+        }
+
+        function scrollFilter(dir) {
+            var bar = document.getElementById('filterBar');
+            if (!bar) return;
+            bar.scrollBy({ left: dir * 220, behavior: 'smooth' });
+        }
+
+        function updateFilterBtns() {
+            var bar = document.getElementById('filterBar');
+            var btnL = document.getElementById('filterBtnLeft');
+            var btnR = document.getElementById('filterBtnRight');
+            if (!bar || !btnL || !btnR) return;
+            var atStart = bar.scrollLeft <= 4;
+            var atEnd = bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 4;
+            btnL.classList.toggle('hidden-btn', atStart);
+            btnR.classList.toggle('hidden-btn', atEnd);
+        }
+
+        function initFilterScroll() {
+            var bar = document.getElementById('filterBar');
+            if (!bar) return;
+            bar.addEventListener('scroll', updateFilterBtns, { passive: true });
+            // Also update on resize in case content changes
+            window.addEventListener('resize', updateFilterBtns);
+            updateFilterBtns();
+        }
+
+        function renderCarousel() {
+            var track = document.getElementById('carouselTrack');
+            var items = '';
+            // Usar los primeros 6 productos para el carrusel
+            var carouselProducts = PRODUCTS.slice(0, 6);
+            for (var i = 0; i < carouselProducts.length; i++) {
+                var product = carouselProducts[i];
+                if (product.img) {
+                    items += '<div class="carousel-item"><img src="' + product.img + '" alt="' + product.name + '"/></div>';
+                } else {
+                    items += '<div class="carousel-item"><div class="placeholder-img">Imagen Promocional</div></div>';
+                }
+            }
+            // Duplicar para efecto infinito
+            track.innerHTML = items + items;
+        }
+
+        function renderProducts() {
+            var grid = document.getElementById('productsGrid');
+            var html = '';
+            for (var i = 0; i < PRODUCTS.length; i++) {
+                var product = PRODUCTS[i];
+                var imgHtml = product.img ? '<img src="' + product.img + '" alt="' + product.name + '"/>' : '<div class="placeholder-img">Sin imagen<br><small>' + product.id + '</small></div>';
+                html += '<div class="product-card" data-category="' + product.category + '" onclick="showProduct(\'' + product.id + '\')">' +
+                    '<div class="card-img">' + imgHtml + '</div>' +
+                    '<div class="card-body">' +
+                    '<span class="card-cat">' + product.cat_label + '</span>' +
+                    '<h3 class="card-name">' + product.name + '</h3>' +
+                    '<p class="card-desc">' + product.desc + '</p>' +
+                    '<button class="card-btn">Ver Detalles</button>' +
+                    '</div>' +
+                    '</div>';
+            }
+            grid.innerHTML = html;
+        }
+
+        function renderFilters() {
+            var filterBar = document.getElementById('filterBar');
+            var categories = {};
+            for (var i = 0; i < PRODUCTS.length; i++) {
+                var cat = PRODUCTS[i].category;
+                if (!categories[cat]) {
+                    categories[cat] = PRODUCTS[i].cat_label;
+                }
+            }
+            
+            // Orden personalizado de categorías
+            var order = ['televisores', 'sonido', 'aires', 'neveras', 'cocinas', 'lavadoras', 'cocina', 'bombas', 'afeitar'];
+            
+            for (var j = 0; j < order.length; j++) {
+                var catId = order[j];
+                if (categories[catId]) {
+                    var btn = document.createElement('button');
+                    btn.className = 'filter-btn';
+                    btn.textContent = categories[catId];
+                    btn.onclick = (function(cId) {
+                        return function() {
+                            filterCat(cId, this);
+                        };
+                    })(catId);
+                    filterBar.appendChild(btn);
+                }
+            }
+            // Refresh button visibility now that all filters are rendered
+            setTimeout(updateFilterBtns, 50);
+        }
+
+        function navigateTo(targetId) {
+            if (isTransitioning || currentPage === targetId) return;
+            isTransitioning = true;
+
+            var fromEl = document.getElementById(currentPage);
+            var toEl = document.getElementById(targetId);
+
+            fromEl.style.opacity = '0';
+            fromEl.style.pointerEvents = 'none';
+
+            setTimeout(function() {
+                fromEl.classList.remove('active');
+                fromEl.style.opacity = '';
+                fromEl.style.pointerEvents = '';
+
+                toEl.classList.add('active');
+                toEl.style.opacity = '0';
+                window.scrollTo(0, 0);
+
+                toEl.getBoundingClientRect();
+                toEl.style.opacity = '';
+
+                currentPage = targetId;
+                setTimeout(function() {
+                    isTransitioning = false;
+                }, 480);
+            }, 420);
+        }
+
+        function showCatalog() {
+            navigateTo('catalog');
+        }
+
+        function handleBack() {
+            if (currentPage === 'catalog') {
+                navigateTo('landing');
+            } else if (currentPage === 'detail') {
+                navigateTo('catalog');
+            }
+        }
+
+        function filterCat(cat, btn) {
+            var allBtns = document.querySelectorAll('.filter-btn');
+            for (var i = 0; i < allBtns.length; i++) {
+                allBtns[i].classList.remove('active');
+            }
+            btn.classList.add('active');
+            
+            var allCards = document.querySelectorAll('.product-card');
+            for (var j = 0; j < allCards.length; j++) {
+                if (cat === 'all' || allCards[j].dataset.category === cat) {
+                    allCards[j].classList.remove('hidden');
+                } else {
+                    allCards[j].classList.add('hidden');
+                }
+            }
+        }
+
+        function showProduct(pid) {
+            var p = null;
+            for (var i = 0; i < PRODUCTS.length; i++) {
+                if (PRODUCTS[i].id === pid) { p = PRODUCTS[i]; break; }
+            }
+            if (!p) return;
+
+            // Build image list: use p.imgs if available, fallback to p.img
+            var images = [];
+            if (p.imgs && p.imgs.length > 0) {
+                images = p.imgs;
+            } else if (p.img) {
+                images = [p.img];
+            }
+
+            var specsRows = '';
+            for (var j = 0; j < p.specs.length; j++) {
+                specsRows += '<tr><td>' + p.specs[j][0] + '</td><td>' + p.specs[j][1] + '</td></tr>';
+            }
+
+            var msg = 'Hola! Estoy interesado en: ' + p.name + '. Quisiera conocer precio y disponibilidad.';
+            var waLink = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+
+            // Build slides
+            var slidesHtml = '';
+            for (var s = 0; s < images.length; s++) {
+                slidesHtml += '<div class="detail-slide"><img src="' + images[s] + '" alt="' + p.name + ' vista ' + (s+1) + '"/></div>';
+            }
+
+            // Build dots
+            var dotsHtml = '';
+            for (var d = 0; d < images.length; d++) {
+                dotsHtml += '<div class="dot' + (d===0?' active':'') + '" onclick="goSlide(' + d + ')"></div>';
+            }
+
+            // Build thumbnails (only if more than 1 image)
+            var thumbsHtml = '';
+            if (images.length > 1) {
+                thumbsHtml = '<div class="detail-thumbs" id="detailThumbs">';
+                for (var t = 0; t < images.length; t++) {
+                    thumbsHtml += '<div class="detail-thumb' + (t===0?' active':'') + '" onclick="goSlide(' + t + ')"><img src="' + images[t] + '" alt=""/></div>';
+                }
+                thumbsHtml += '</div>';
+            }
+
+            // Swipe hint (only if more than 1 image)
+            var hintHtml = '';
+            if (images.length > 1) {
+                hintHtml = '<div class="swipe-hint" id="swipeHint">' +
+                    '<div class="swipe-hint-hand">👆</div>' +
+                    '<div class="swipe-hint-label">Desliza para ver más fotos</div>' +
+                    '</div>';
+            }
+
+            // Arrows
+            var prevArrow = images.length > 1 ? '<button class="carousel-arrow prev" id="carArrowPrev" onclick="slideArrow(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>' : '';
+            var nextArrow = images.length > 1 ? '<button class="carousel-arrow next" id="carArrowNext" onclick="slideArrow(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>' : '';
+
+            var detailHTML =
+                '<button class="back-btn" onclick="handleBack()" style="position:fixed;top:16px;left:16px;z-index:1000;background:var(--secondary);color:white;border:none;">' +
+                '<svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M19 11H7.83l5.59-5.59L12 3l-9 9 9 9 1.41-1.41L7.83 13H19v-2z"/></svg> Atrás</button>' +
+                '<div class="detail-wrap">' +
+                  '<div class="detail-image-col">' +
+                    '<div class="detail-carousel" id="detailCarousel">' +
+                      '<div class="detail-carousel-track" id="detailTrack">' + slidesHtml + '</div>' +
+                      prevArrow + nextArrow +
+                      '<div class="carousel-dots" id="carouselDots">' + dotsHtml + '</div>' +
+                      hintHtml +
+                    '</div>' +
+                    thumbsHtml +
+                  '</div>' +
+                  '<div class="detail-info">' +
+                    '<p class="detail-cat">' + p.cat_label + '</p>' +
+                    '<h1 class="detail-name">' + p.name + '</h1>' +
+                    '<p class="detail-desc">' + p.desc + '</p>' +
+                    '<p class="specs-title">Especificaciones</p>' +
+                    '<table class="specs-table"><thead><tr><th>Característica</th><th>Valor</th></tr></thead><tbody>' + specsRows + '</tbody></table>' +
+                    '<a href="' + waLink + '" target="_blank" class="wa-btn">' +
+                    '<svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>' +
+                    'Consultar por WhatsApp</a>' +
+                  '</div>' +
+                '</div>';
+
+            document.getElementById('detailContent').innerHTML = detailHTML;
+            currentSlide = 0;
+            totalSlides = images.length;
+
+            // Touch/swipe support
+            var carousel = document.getElementById('detailCarousel');
+            if (carousel && totalSlides > 1) {
+                var touchStartX = 0;
+                carousel.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; }, {passive:true});
+                carousel.addEventListener('touchend', function(e){
+                    var dx = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(dx) > 40) slideArrow(dx < 0 ? 1 : -1);
+                }, {passive:true});
+            }
+
+            navigateTo('detail');
+        }
+
+        var currentSlide = 0;
+        var totalSlides = 1;
+
+        function goSlide(index) {
+            var track = document.getElementById('detailTrack');
+            if (!track) return;
+            currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
+            track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            // Update dots
+            var dots = document.querySelectorAll('#carouselDots .dot');
+            for (var i = 0; i < dots.length; i++) {
+                dots[i].classList.toggle('active', i === currentSlide);
+            }
+            // Update thumbnails
+            var thumbs = document.querySelectorAll('#detailThumbs .detail-thumb');
+            for (var t = 0; t < thumbs.length; t++) {
+                thumbs[t].classList.toggle('active', t === currentSlide);
+            }
+        }
+
+        function slideArrow(dir) {
+            goSlide(currentSlide + dir);
+        }
+    </script>
+</body>
+</html>
