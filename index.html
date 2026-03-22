@@ -821,7 +821,7 @@
         </div>
 
         <div class="social-bar">
-            <a href="https://wa.me/584220109811" target="_blank" class="social-link" title="WhatsApp">
+            <a href="https://wa.me/584220109811" id="wa-portada" target="_blank" class="social-link" title="WhatsApp">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
                 WhatsApp
             </a>
@@ -867,7 +867,25 @@
 
     <script>
         const PRODUCTS = [];
-        const WA_NUMBER = "584220109811";
+
+        // ── CONFIGURACIÓN MULTI-CLIENTE ──────────────────────────────────────────────
+        const listaClientes = {
+        MiguelCamacaro: "584220109811",
+        HectorFinanciamiento: "584121402126"
+        // Agrega más clientes aquí: id: "numero_internacional_sin_+"
+};
+
+        const _idParam = new URLSearchParams(window.location.search).get("id");
+        const WA_NUMBER = listaClientes[_idParam] || Object.values(listaClientes)[0];
+
+        // ── Actualiza el botón de WhatsApp de la portada ──
+        document.addEventListener("DOMContentLoaded", function () {
+        var btnPortada = document.getElementById("wa-portada");
+        if (btnPortada) {
+        btnPortada.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hola! Quisiera obtener más información sobre sus productos.");
+    }
+});
+// ─────────────────────────────────────────────────────────────────────────────
         let currentPage = "landing";
         let isTransitioning = false;
 
@@ -1042,7 +1060,7 @@
                     imgs: ["https://i.ibb.co/chMQkhfk/Daewoo-DA76-GES-Tope-de-cocina-Dual-Gas-El-ctrico-de-5-hornillas.png"],
                     img: "https://i.ibb.co/chMQkhfk/Daewoo-DA76-GES-Tope-de-cocina-Dual-Gas-El-ctrico-de-5-hornillas.png",
                     desc: "Placa de cocción híbrida empotrable con 4 hornillas a gas y 1 eléctrica. Superficie de vidrio templado negro. Encendido electrónico integrado. Ideal para hogares que buscan seguridad alternativa.",
-                    specs: [["Tipo montaje", "Empotrable (Built-in)"], ["Dimensiones", "76 cm de ancho"], ["Configuración", "5 hornillas (4 gas + 1 eléctrica)"], ["Superficie", "Vidrio templado alta resistencia"], ["Encendido", "Electrónico integrado"], ["Voltaje", "110-120V / 60Hz"], ["Parrillas", "Hierro fundido (Cast iron)"], ["Garantía", "1 año"]]},
+                    specs: [["Tipo montaje", "Empotrable (Built-in)"], ["Dimensiones", "76 cm de ancho"], ["Configuración", "5 hornillas (4 gas + 1 eléctrica)"], ["Superficie", "Vidrio templado alta resistencia"], ["Encendido", "Electrónico integrado"], ["Voltaje", "220V / 60Hz"], ["Parrillas", "Hierro fundido (Cast iron)"], ["Garantía", "1 año"]]},
                 {id: "daewoo_30_mirror", name: "Daewoo DGR-30MIR (Serie Inox Mirror) - Cocina a Gas de 30 pulgadas", category: "cocinas", cat_label: "COCINAS",
                     imgs: ["https://i.ibb.co/Fkky98qp/Daewoo-DGR-30-MIR-Serie-Inox-Mirror-Cocina-a-Gas-de-30-pulgadas-76-cm-con-horno-y-calientaplato.jpg"],
                     img: "https://i.ibb.co/Fkky98qp/Daewoo-DGR-30-MIR-Serie-Inox-Mirror-Cocina-a-Gas-de-30-pulgadas-76-cm-con-horno-y-calientaplato.jpg",
@@ -1201,6 +1219,8 @@
                     desc: "Soporte de pared articulado para televisores LED/LCD. Permite inclinación y rotación para el ángulo de visión ideal. Disponible en modelo 23\"-55\" (BO2355M4) y 23\"-65\" (BO2355M24).",
                     specs: [["Marca", "Boost"], ["Modelos", "BO2355M4 (23\"-55\") / BO2355M24 (23\"-65\")"], ["Tipo", "Soporte de pared articulado"], ["Compatibilidad", "LED TV / LCD TV"], ["Norma VESA", "100×100 / 200×200 / 400×200 / 400×400 mm"], ["Peso máx.", "45 kg"], ["Material", "Acero alta resistencia"], ["Garantía", "1 año"]]},
 
+
+
                 // ── MÁQUINAS DE AFEITAR ──
                 {id: "kit_cortacabello_wahl", name: "Kit Cortacabello Wahl Deluxe Groom Pro – 21 Piezas", category: "afeitar", cat_label: "MÁQUINAS DE AFEITAR",
                     imgs: ["https://i.ibb.co/zHTrZV37/Kit-Cortacabello-Wahl-Deluxe-Groom-Pro-21-Piezas.jpg"],
@@ -1208,6 +1228,15 @@
                     desc: "Kit profesional completo para corte de cabello y arreglo personal. Incluye maquinilla con cuchillas de autoafilado, trimmer compacto para detalles, 10 peines guía y estuche blando.",
                     specs: [["Marca", "Wahl"], ["Modelo", "Deluxe Groom Pro"], ["Piezas", "21 piezas"], ["Cuchillas", "Autoafilado (precisión duradera)"], ["Peines guía", "10 tamaños individuales"], ["Trimmer", "Compacto para detalles y retoques"], ["Garantía", "1 año"]]},
                 {id: "kit_cortacabello_wahl_basic", name: "Wahl HomeCut™ Basic - Kit para Cortar el Cabello (14 piezas)", category: "afeitar", cat_label: "MÁQUINAS DE AFEITAR",
+                    imgs: ["https://i.ibb.co/CKLgDTTx/Wahl-Home-Cut-Basic-Kit-14-Piezas.jpg"],
+                    img: "https://i.ibb.co/CKLgDTTx/Wahl-Home-Cut-Basic-Kit-14-Piezas.jpg",
+                    desc: "Kit de corte de pelo doméstico con cable para potencia constante. Palanca de ajuste de altura para diferentes largos. Motor electromagnético vibratorio de larga duración.",
+                    specs: [["Marca", "Wahl"], ["Motor", "Electromagnético vibratorio de larga duración"], ["Alimentación", "Con cable (sin necesidad de carga)"], ["Cuchillas", "Acero al carbono, autoafilables"], ["Piezas", "14 piezas (máquina + accesorios)"], ["Ajuste altura", "Palanca Taper Lever para degradados"], ["Rango corte", "3 mm a 25 mm"], ["Voltaje", "110-120V"], ["Garantía", "1 año"]]},
+
+
+
+                // ── CONGELADORES ──
+                {id: "laptos_appel", name: "laptos appel de 64 GB", category: "congeladores", cat_label: "CONGELADORES",
                     imgs: ["https://i.ibb.co/CKLgDTTx/Wahl-Home-Cut-Basic-Kit-14-Piezas.jpg"],
                     img: "https://i.ibb.co/CKLgDTTx/Wahl-Home-Cut-Basic-Kit-14-Piezas.jpg",
                     desc: "Kit de corte de pelo doméstico con cable para potencia constante. Palanca de ajuste de altura para diferentes largos. Motor electromagnético vibratorio de larga duración.",
@@ -1293,7 +1322,7 @@
             }
             
             // Orden personalizado de categorías
-            var order = ['televisores', 'sonido', 'aires', 'neveras', 'cocinas', 'lavadoras', 'cocina', 'bombas', 'afeitar'];
+            var order = ['televisores', 'sonido', 'aires', 'neveras', 'congeladores', 'cocinas', 'lavadoras', 'cocina', 'bombas', 'afeitar'];
             
             for (var j = 0; j < order.length; j++) {
                 var catId = order[j];
